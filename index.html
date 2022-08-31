@@ -30,9 +30,17 @@
 <script>
 function addOutline(){
 	const outlineGroup = document.querySelector("#outlineGroup");
-	const outlineElements = document.querySelectorAll(".outline");
-    for (int i = 0; i < outlineElements.length; i++;){
-    	console.log(outlineElements[i].id);
+	const outlineComponents = document.querySelectorAll(".outline");
+
+  
+    for (let i = 0; i < outlineComponents.length; i++){
+    	let newElement = document.createElement("use");
+      newElement.setAttribute("href", "#"+outlineComponents[i].id);
+      newElement.setAttribute("stroke", "black");
+      newElement.setAttribute("stroke-width", "5px");
+      outlineGroup.appendChild(newElement);
     }
+
+  
 }
 </script>
