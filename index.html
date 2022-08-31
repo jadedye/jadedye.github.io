@@ -1,6 +1,40 @@
----
-layout: default
-title: Art and nerdiness - Jade's Space
----
+<!DOCTYPE html>
+<html>
+<body>
 
-Hello
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support SVG filters.</p>
+
+<svg height="500" width="500">
+  <defs>
+    <filter id="f1" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+      <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+    </filter>
+  </defs>
+  <g id="outlineGroup">
+  
+  </g>
+  
+  <use href="#head" stroke="black" stroke-width="5px" />
+  <use href="#ear" stroke="black" stroke-width="5px" />
+  
+  
+        <g fill="#EEE">
+        	<path class="outline" id="head" d="M264.55,346.7h-29.1a66.24,66.24,0,0,1-66.21-66.28v-56a66.24,66.24,0,0,1,66.21-66.28h29.1a66.24,66.24,0,0,1,66.21,66.28v56A66.24,66.24,0,0,1,264.55,346.7Z" />
+        	<path class="outline" id="ear" d="M172.46 237.61c-1.33-14.15-32.27-33.73-32.86 5.46-1.71 24.21 21.8 38.87 27.62 36.61 11.14-12.16 9.82-30.51 5.24-42.07z" />
+        </g>
+        
+</svg>
+
+</body>
+</html>
+
+<script>
+function addOutline(){
+	const outlineGroup = document.querySelector("#outlineGroup");
+	const outlineElements = document.querySelectorAll(".outline");
+    for (int i = 0; i < outlineElements.length; i++){
+    	console.log(outlineElements[i].id);
+    }
+}
+</script>
