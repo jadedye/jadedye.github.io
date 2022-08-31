@@ -2,8 +2,6 @@
 <html>
 <body>
 
-<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support SVG filters.</p>
-
 <svg height="500" width="500">
   <defs>
     <filter id="f1" x="0" y="0" width="200%" height="200%">
@@ -33,7 +31,7 @@
 function addOutline(){
 	const outlineGroup = document.querySelector("#outlineGroup");
 	const outlineElements = document.querySelectorAll(".outline");
-    for (int i = 0; i < outlineElements.length; i++){
+    for (int i = 0; i < outlineElements.length; i++;){
     	console.log(outlineElements[i].id);
     }
 }
